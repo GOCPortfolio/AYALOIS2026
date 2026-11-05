@@ -75,7 +75,7 @@ const CONFIG = {
     "To Loiswealth and Emmy: may God keep you, forever and always. Cheers!"
   ],
 
-  rsvp: { endpoint: "", callNumber: "08021100027", whatsapp: "2348021100027" },
+  rsvp: { endpoint: "https://script.google.com/macros/s/AKfycbyroB_u4maE8jtGARhaRza389iGh8cUmFSCQbIJVQmKoLnVLQUJN8w-M582ITcrOxRC/exec", callNumber: "08021100027", whatsapp: "2348021100027" },
 
   gifts: { message: "Your love and presence are the greatest gift. If you would like to bless us further, you may do so below.",
            bank: "UBA", accountName: "IRONDI LOIS U", accountNumber: "2081257681" },
@@ -93,7 +93,7 @@ const CONFIG = {
     ["Make-up Artist", "Ivy's Signature"],
     ["Photography & Videography", "CleanLens"],
     ["Bride's Outfit", "Greg Signature"],
-    ["Digital IV Developer", "G.O.C | BrandStrategist", "https://wa.me/2348027134537"]
+    ["Brand Strategist", "G.O.C", "https://wa.me/2348027134537"]
   ],
 
   footer: { thanks: "Thank you for celebrating with us. Your love and prayers mean the world to us." },
