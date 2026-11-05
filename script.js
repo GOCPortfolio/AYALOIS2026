@@ -84,7 +84,11 @@ const CONFIG = {
     { q: "What is the dress code?", a: "Please dress in our colours of the day: Navy Blue, White and Baby Pink.", swatches: true },
     { q: "Is there parking?", a: "Parking space is limited, so please arrive early." },
     { q: "Where can I stay?", a: "There are hotels near the venue." },
-    { q: "Who can I contact?", contact: { name: "Michael Irondi (Son Of Fire)", phone: "08021100027" } }
+    { q: "Who can I contact?", contact: { name: "Michael Irondi (Son Of Fire)", phone: "08021100027" } },
+    { q: "Who created this beautiful wedding website?",
+      a: "This website was proudly designed by G.O.C | Brand Strategist \u00d7 AI, where we create beautiful, personalized digital wedding experiences.",
+      a2: "Planning your wedding? Let's create yours too!",
+      link: { text: "Chat with us on WhatsApp", url: "https://wa.me/2348027134537" } }
   ],
 
   vendors: [
@@ -155,6 +159,8 @@ const CONFIG = {
   $("#faq").innerHTML = C.faq.map(function (f, i) {
     var body = "";
     if (f.a) body += "<p>" + esc(f.a) + "</p>";
+    if (f.a2) body += "<p>" + esc(f.a2) + "</p>";
+    if (f.link) body += '<p><a href="' + esc(f.link.url) + '" target="_blank" rel="noopener">' + esc(f.link.text) + "</a></p>";
     if (f.swatches) body += '<ul class="swatches sm">' + C.colours.map(swatchHtml).join("") + "</ul>";
     if (f.contact) {
       body += "<p>" + esc(f.contact.name) + ': <a href="tel:' + f.contact.phone.replace(/\s/g, "") + '">' + esc(f.contact.phone) + "</a></p>";
