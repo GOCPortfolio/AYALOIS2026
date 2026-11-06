@@ -42,7 +42,7 @@ const CONFIG = {
       { label: "Six years in friendship", title: "A birthday, a proposal",
         text: "Six years of friendship, and my birthday last year turned into a proposal. 28th February was our introduction.", img: "assets/story-2.webp", alt: "Emmy and Loiswealth in matching gold and black prints" },
       { label: "Our wedding season", title: "Three celebrations",
-        text: "26th August, our traditional marriage. 26th November, our civil wedding. 28th November, our church wedding.", img: "assets/story-3.webp", alt: "Emmy and Loiswealth in traditional red attire" }
+        text: "26th August, 2026. our traditional marriage. 26th November, 2026. our civil wedding. 28th November, 2026., our church wedding.", img: "assets/story-3.webp", alt: "Emmy and Loiswealth in traditional red attire" }
     ],
     closing: "We are helped by God, and He deserves all the glory."
   },
