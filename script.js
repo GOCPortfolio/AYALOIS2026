@@ -281,13 +281,15 @@ const CONFIG = {
   var audio = $("#music"), sbtn = $("#soundBtn"), muted = store("wedMuted") === "1", fadeT = null;
   function paintSound() { sbtn.classList.toggle("off", muted); sbtn.setAttribute("aria-pressed", String(muted)); sbtn.setAttribute("aria-label", muted ? "Unmute music" : "Mute music"); }
   function fadeTo(v) { clearInterval(fadeT); fadeT = setInterval(function () { var d = v - audio.volume; if (Math.abs(d) < 0.03) { audio.volume = v; clearInterval(fadeT); if (v === 0) audio.pause(); } else audio.volume = Math.max(0, Math.min(1, audio.volume + Math.sign(d) * 0.03)); }, 60); }
-  function startMusic() { sbtn.hidden = false; paintSound(); if (muted) return; audio.volume = 0; var p = audio.play(); if (p && p.catch) p.catch(function () {}); fadeTo(C.music.volume); }
-  sbtn.addEventListener("click", function () { muted = !muted; store("wedMuted", muted ? "1" : "0"); paintSound(); if (muted) fadeTo(0); else { audio.volume = 0; var p = audio.play(); if (p && p.catch) p.catch(function () {}); fadeTo(C.music.volume); } });
+  function startMusic() { try { sbtn.hidden = false; paintSound(); if (muted) return; audio.volume = 0; var p = audio.play(); if (p && p.catch) p.catch(function () {}); fadeTo(C.music.volume); } catch (e) {} }
+  sbtn.addEventListener("click", function () { try { muted = !muted; store("wedMuted", muted ? "1" : "0"); paintSound(); if (muted) fadeTo(0); else { audio.volume = 0; var p = audio.play(); if (p && p.catch) p.catch(function () {}); fadeTo(C.music.volume); } } catch (e) {} });
 
   /* ENVELOPE INTRO */
   var intro = $("#intro"), page = $("#main"), env = $("#env"), seal = $("#seal"), card = $("#envCard"), flap = $("#envFlap"), opened = false;
   page.setAttribute("inert", ""); document.documentElement.classList.add("lock");
+  var done = false;
   function finish() {
+    if (done) return; done = true;
     intro.classList.add("gone"); document.body.classList.remove("is-intro"); document.documentElement.classList.remove("lock"); page.removeAttribute("inert");
     setTimeout(function () { intro.hidden = true; }, 700); sbtn.hidden = false; paintSound(); try { page.focus({ preventScroll: true }); } catch (e) {}
     window.scrollTo(0, 0);
@@ -296,8 +298,9 @@ const CONFIG = {
   function openEnv(skip) {
     if (opened) return; opened = true; $("#envHint").style.opacity = 0; $("#skipBtn").hidden = true;
     if (!skip) startMusic(); else { sbtn.hidden = false; paintSound(); }
-    if (skip || reduce) { intro.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 350, fill: "forwards" }).onfinish = finish; if (skip && !reduce) {} return; }
-    var T = function (fn, ms) { return setTimeout(fn, ms); };
+    if (skip || reduce) { try { intro.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 350, fill: "forwards" }).onfinish = finish; } catch (e) {} setTimeout(finish, 600); return; }
+    var T = function (fn, ms) { return setTimeout(function () { try { fn(); } catch (e) { finish(); } }, ms); };
+    setTimeout(finish, 4200);            // safety net: never get stuck
     seal.classList.add("press");
     T(function () { seal.classList.add("crack"); }, 180);
     T(function () { flap.classList.add("open"); }, 520);
@@ -314,8 +317,10 @@ const CONFIG = {
     }, 1900);
     T(function () { finish(); }, 3500);
   }
-  seal.addEventListener("click", function () { seal.blur(); openEnv(false); });
+  env.addEventListener("click", function () { openEnv(false); });
+  seal.addEventListener("click", function () { openEnv(false); });
   $("#skipBtn").addEventListener("click", function () { openEnv(true); });
-  if (params.has("nointro")) { intro.hidden = true; opened = true; finish(); } else { seal.focus({ preventScroll: true }); }
+  if (params.has("nointro")) { intro.hidden = true; opened = true; finish(); } else { try { seal.focus({ preventScroll: true }); } catch (e) {} }
   paintSound();
+  window.__wedOK = true;
 })();

@@ -24,10 +24,11 @@ a{color:inherit}
 
 /* ===== INTRO ===== */
 #intro{position:fixed;inset:0;z-index:100;background:var(--navy-d) url(assets/damask.svg);background-size:120px 160px;display:grid;place-items:center;transition:opacity .6s}
+#intro[hidden]{display:none}
 #intro.gone{opacity:0;pointer-events:none}
 .env-wrap{text-align:center;width:100%;display:grid;place-items:center;gap:14px;padding:0 4vw}
 .env-guest{font-family:var(--script);font-size:34px;color:var(--gold-l);margin-bottom:-4px}
-.env{position:relative;width:min(90vw,500px);aspect-ratio:4/3;perspective:1200px;margin-top:6vh}
+.env{position:relative;width:min(90vw,500px);aspect-ratio:4/3;margin-top:6vh;cursor:pointer}
 .env>*{position:absolute}
 .env-back{inset:0;background:linear-gradient(160deg,#1B2A86,#0E1A63);border-radius:6px;box-shadow:0 30px 60px rgba(0,0,0,.5);z-index:0}
 .env-card{left:50%;bottom:9%;width:56%;margin:0;transform:translateX(-50%);transition:transform 1s cubic-bezier(.4,.1,.2,1);z-index:2;padding:6px;background:#fff;border:1px solid var(--gold);box-shadow:0 8px 20px rgba(0,0,0,.35)}
@@ -37,8 +38,8 @@ a{color:inherit}
 .env-front{inset:0;z-index:3;background:linear-gradient(180deg,#16247C,#0C1757);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%);border-radius:0 0 6px 6px}
 .env-front::before{content:"";position:absolute;inset:0;background:url(assets/damask.svg);background-size:80px 106px;opacity:.9}
 .env-flap{left:0;top:0;width:100%;height:56%;z-index:4;background:linear-gradient(180deg,#1F2F93,#14216B);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;transition:transform .8s cubic-bezier(.5,0,.2,1);backface-visibility:visible}
-.env-flap.open{transform:rotateX(180deg)}
-.seal{left:50%;top:54%;width:72px;height:72px;margin:-36px 0 0 -36px;z-index:6;background:none;border:0;cursor:pointer;border-radius:50%;transition:transform .2s}
+.env-flap.open{transform:perspective(1200px) rotateX(180deg)}
+.seal{touch-action:manipulation;-webkit-tap-highlight-color:transparent;left:50%;top:54%;width:72px;height:72px;margin:-36px 0 0 -36px;z-index:6;background:none;border:0;cursor:pointer;border-radius:50%;transition:transform .2s}
 .seal:hover{transform:scale(1.05)}
 .seal.press{transform:scale(.88);outline:none}
 .seal-half{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 35% 30%,#F3DC9B,#C9A24B 55%,#8F6D24);box-shadow:0 4px 12px rgba(0,0,0,.5),inset 0 0 0 4px rgba(255,255,255,.14);display:grid;place-items:center;color:var(--navy-d);font:700 20px/1 var(--caps)}
