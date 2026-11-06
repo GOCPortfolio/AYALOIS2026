@@ -32,7 +32,7 @@ const CONFIG = {
       mapQuery: "The Wisdom Garden, 8/10 White Street, off Garden Road, Anagada, Abuja", mapsUrl: "" }
   ],
 
-  fod: { name: "MR & MRS CHUKWUEMEKA UGBOAJA", role: "Fully in charge of the programme" },
+  fod: { name: "MR & MRS CHUKWUEMEKA UGBOAJA", role: "" },
 
   story: {
     intro: "When God writes your story, it is always worth the wait. Through every season, God has guided our steps to this moment. We invite you to witness and celebrate the beginning of our forever. Thank you.",
@@ -40,9 +40,9 @@ const CONFIG = {
       { label: "Where it began", title: "Samgee Continental Service",
         text: "I will never forget Samgee Continental Service at INEC Headquarters, FCT, where our story began and is forever.", img: "assets/story-1.webp", alt: "Emmy and Loiswealth in white and black, posing together" },
       { label: "Six years in friendship", title: "A birthday, a proposal",
-        text: "Six years of friendship, and my birthday last year turned into a proposal. 28th February was our introduction.", img: "assets/story-2.webp", alt: "Emmy and Loiswealth in matching gold and black prints" },
+        text: "Six years of friendship, and my birthday last year 26th November, 2026 turned into a proposal. 28th February, 2026 was our introduction.", img: "assets/story-2.webp", alt: "Emmy and Loiswealth in matching gold and black prints" },
       { label: "Our wedding season", title: "Three celebrations",
-        text: "26th August, 2026. our traditional marriage. 26th November, 2026. our civil wedding. 28th November, 2026., our church wedding.", img: "assets/story-3.webp", alt: "Emmy and Loiswealth in traditional red attire" }
+        text: "26th August, our traditional marriage. 26th November, our civil wedding. 28th November, 2026., our church wedding.", img: "assets/story-3.webp", alt: "Emmy and Loiswealth in traditional red attire" }
     ],
     closing: "We are helped by God, and He deserves all the glory."
   },
@@ -64,6 +64,7 @@ const CONFIG = {
     ["g14","The couple with Emmy in a red agbada"],
     ["g15","Emmy close to Loiswealth in red print"],
     ["g16","Loiswealth and Emmy in black by the wooden doors"]
+    ["g17","Loiswealth in a black tiered dress and hat, smiling"]
   ],
 
   toast: [
