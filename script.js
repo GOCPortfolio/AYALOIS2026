@@ -97,7 +97,7 @@ const CONFIG = {
     ["Make-up Artist", "Ivy's Signature"],
     ["Photography & Videography", "CleanLens"],
     ["Bride's Outfit", "Greg Signature"],
-    ["Brand Strategist", "G.O.C", "https://wa.me/2348027134537"]
+    ["Website IV Developer", "G.O.C | Brand Strategist", "https://wa.me/2348027134537"]
   ],
 
   footer: { thanks: "Thank you for celebrating with us. Your love and prayers mean the world to us." },
