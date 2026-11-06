@@ -8,8 +8,8 @@
 - `assets/`: photos (`hero.webp`, `envelope-card.webp`, `story-1..3.webp`, `g01..g16.webp` + `-sm` thumbnails), flowers from your card (`floral-*.webp`), `music.mp3`, `og-image-2.jpg` (link preview)
 
 ## 2. Still to fill in (search `PLACEHOLDER` / the CONFIG)
-1. **Web address** (`CONFIG.siteUrl` and the 4 places in `index.html`: `canonical`, `og:url`, `og:image`, `twitter:image`; each shows `https://YOUR-SITE-ADDRESS/`).
-2. **Bank details**: `CONFIG.gifts` (bank, accountName, accountNumber). Until you add them the copy button is disabled.
+1. **Web address** (`CONFIG.siteUrl` and the 4 places in `index.html`: `canonical`, `og:url`, `og:image`, `twitter:image`; each shows `https://gocportfolio.github.io/AYALOIS2026/`).
+2. ~~Bank details~~: added (UBA, IRONDI LOIS U, 2081257681). Double-check before sharing.
 3. **RSVP endpoint**: `CONFIG.rsvp.endpoint` (see section 4).
 4. **Music**: `assets/music.mp3` is only a generated placeholder. Replace it with your own licensed MP3.
 5. Tagline ("Worth The Wait") and the 6-line toast are suggestions: edit in CONFIG.

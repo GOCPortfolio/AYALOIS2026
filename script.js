@@ -40,9 +40,9 @@ const CONFIG = {
       { label: "Where it began", title: "Samgee Continental Service",
         text: "I will never forget Samgee Continental Service at INEC Headquarters, FCT, where our story began and is forever.", img: "assets/story-1.webp", alt: "Emmy and Loiswealth in white and black, posing together" },
       { label: "Six years in friendship", title: "A birthday, a proposal",
-        text: "Six years of friendship, and my birthday last year 26th November, 2026 turned into a proposal. 28th February, 2026 was our introduction.", img: "assets/story-2.webp", alt: "Emmy and Loiswealth in matching gold and black prints" },
+        text: "Six years of friendship, and my birthday last year November 26th, 2025 turned into a proposal. 28th February, 2026 was our introduction.", img: "assets/story-2.webp", alt: "Emmy and Loiswealth in matching gold and black prints" },
       { label: "Our wedding season", title: "Three celebrations",
-        text: "26th August, our traditional marriage. 26th November, our civil wedding. 28th November, 2026., our church wedding.", img: "assets/story-3.webp", alt: "Emmy and Loiswealth in traditional red attire" }
+        text: "26th August, our traditional marriage. 26th November, our civil wedding. 28th November, 2026 our church wedding.", img: "assets/story-3.webp", alt: "Emmy and Loiswealth in traditional red attire" }
     ],
     closing: "We are helped by God, and He deserves all the glory."
   },
@@ -52,6 +52,7 @@ const CONFIG = {
     ["g02","Emmy and Loiswealth smiling in white and black"],
     ["g03","The couple seated in gold and black ankara prints"],
     ["g04","Loiswealth and Emmy in red traditional attire, portrait"],
+    ["g17","Loiswealth in a black tiered dress and hat, smiling"],
     ["g05","The couple sharing a playful moment in white shirts"],
     ["g06","Loiswealth and Emmy in gold prints against a warm backdrop"],
     ["g07","Emmy and Loiswealth in matching red and black prints"],
@@ -64,7 +65,6 @@ const CONFIG = {
     ["g14","The couple with Emmy in a red agbada"],
     ["g15","Emmy close to Loiswealth in red print"],
     ["g16","Loiswealth and Emmy in black by the wooden doors"]
-    ["g17","Loiswealth in a black tiered dress and hat, smiling"]
   ],
 
   toast: [
@@ -98,7 +98,7 @@ const CONFIG = {
     ["Make-up Artist", "Ivy's Signature"],
     ["Photography & Videography", "CleanLens"],
     ["Bride's Outfit", "Greg Signature"],
-    ["Website IV Developer", "G.O.C | Brand Strategist", "https://wa.me/2348027134537"]
+    ["Digital IV Developer", "G.O.C | Brand Strategist", "https://wa.me/2348027134537"]
   ],
 
   footer: { thanks: "Thank you for celebrating with us. Your love and prayers mean the world to us." },
